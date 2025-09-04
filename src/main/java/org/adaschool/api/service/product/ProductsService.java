@@ -13,7 +13,7 @@ public interface ProductsService {
 
     List<Product> all();
 
-     Product deleteById(String id);
+    void deleteById(String id);
 
     Product update(Product Product, String ProductId);
 }

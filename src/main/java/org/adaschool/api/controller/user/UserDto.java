@@ -1,4 +1,4 @@
-package org.adaschool.api.repository.user;
+package org.adaschool.api.controller.user;
 
 public class UserDto {
     private final String name;

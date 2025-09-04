@@ -20,41 +20,30 @@ public class ProductsServiceMongoDb implements ProductsService {
 
     @Override
     public Product save(Product product) {
-        return productMongoRepository.save(product);
-    }
-
-    @Override
-    public Optional<Product> findById(String id) {
-        return productMongoRepository.findById(id);
-    }
-
-    @Override
-    public List<Product> all() {
-        return productMongoRepository.findAll();
-    }
-
-    @Override
-    public Product deleteById(String id) {
-        Optional<Product> product = productMongoRepository.findById(id);
-        product.ifPresent(p -> productMongoRepository.deleteById(id));
+        //TODO implement this method
         return null;
     }
 
     @Override
+    public Optional<Product> findById(String id) {
+        //TODO implement this method
+        return Optional.empty();
+    }
+
+    @Override
+    public List<Product> all() {
+        //TODO implement this method
+        return null;
+    }
+
+    @Override
+    public void deleteById(String id) {
+        //TODO implement this method
+    }
+
+    @Override
     public Product update(Product product, String productId) {
-        Optional<Product> existingProduct = productMongoRepository.findById(productId);
-        if (existingProduct.isPresent()) {
-            Product productToUpdate = existingProduct.get();
-            // copiamos los datos del nuevo objeto al existente
-            productToUpdate.setName(product.getName());
-            productToUpdate.setDescription(product.getDescription());
-            productToUpdate.setCategory(product.getCategory());
-            productToUpdate.setTags(product.getTags());
-            productToUpdate.setPrice(product.getPrice());
-            productToUpdate.setImageUrl(product.getImageUrl());
-            return productMongoRepository.save(productToUpdate);
-        } else {
-            throw new RuntimeException("Product with id " + productId + " not found");
-        }
+        //TODO implement this method
+        return null;
     }
 }
